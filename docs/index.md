@@ -62,11 +62,16 @@ Sur l'équipement il faut configurer le type et la localisation si elle est néc
 
 Pour le calendrier personnalisé, un champ permet de remplir le chemin, ce fichier doit être local au format ics, le calendrier doit contenir des evenements de type "jours entiers" avec un début et une fin. Par exemple un calendrier de congés, vacances scolaires non pris en charge en standard, jours fériés etc
 
+A partir de la version du 2017-10-08 01:02:33, différents types peuvent nécéssiter la configuration du plugin Localisation et Trajet (geotrav).
+La mise à jour depuis des versions antérieures de ce plugin conduisent au non fonctionnement du plugin. Il convient de parametrer les nouvelles options type et localisation. 
+
 ## FAQ
 
 > Est-ce que le plugin s'appuie sur des API tiers ?
 
-Non, y compris les calendriers des vacances scolaires sont inclus en local.
+Oui, le plugin Localisation et Trajet (geotrav) est necéssaire pour  les types jours fériés, vacances scolaires et global. 
+
+A noter, les calendriers des vacances scolaires sont inclus en local.
 
 >Est-ce que je peux récupérer un calendrier depuis une instance Nextcloud ?
 

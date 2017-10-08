@@ -1,7 +1,9 @@
 [panel,primary]
 .Est-ce que le plugin s'appuie sur des API tiers ?
 --
-Non, y compris les calendriers des vacances scolaires sont inclus en local.
+Oui, le plugin Localisation et Trajet (geotrav) est necéssaire pour  les types jours fériés, vacances scolaires et global.
+
+A noter, les calendriers des vacances scolaires sont inclus en local.
 --
 
 [panel,primary]
