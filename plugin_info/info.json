@@ -5,6 +5,6 @@
 	"author" : "lunarok",
 	"require" : "2.4",
 	"category" : "organization",
-	"changelog" : "https://lunarok.github.com/jeedom_dayinfo/",
+	"changelog" : "https://lunarok.github.com/jeedom_dayinfo/changelog.html",
 	"documentation" : "https://lunarok.github.com/jeedom_dayinfo/"
 }
