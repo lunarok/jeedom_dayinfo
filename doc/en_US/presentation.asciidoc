@@ -14,7 +14,9 @@ Informations diverses
 
 - nombre de jours avant la prochaine saison
 
--current weekend (1 or 0)
+- current weekend (1 or 0)
+
+- day of week (ISO-8601) (1 to 7)
 
 Vacances scolaires
 
