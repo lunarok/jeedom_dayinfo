@@ -54,7 +54,7 @@ Ce plugin permet d'obtenir plusieurs types d'équipements qui apportent leurs in
 
 * label prochain event
 
-## Configuration
+## Konfiguration
 
 Le plugin ne comporte pas de configuration générale.
 
