@@ -74,7 +74,7 @@ Pas directement dans le plugin, mais via ce genre de commande oui :
 
 wget --output-document ./calendar.ics --auth-no-challenge --http-user=USER --http-password="PASSWORD" "http://IP:PORT/remote.php/dav/calendars/USER/Kalender?export"
 
-## Changelog
+## Änderungsprotokoll
 
 ### Version vom Oktober 2017
 
