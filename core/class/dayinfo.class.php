@@ -294,6 +294,8 @@ class dayinfo extends eqLogic {
         $datetoday = date_create("today");
         $diffday = 365;
         $diffend = 365;
+        $year = date("Y");
+        $finete = mktime(0, 0, 0, 1,  1,  $year);
 
         foreach ($events as $event) {
             if (isset($event['DTEND'])) {
