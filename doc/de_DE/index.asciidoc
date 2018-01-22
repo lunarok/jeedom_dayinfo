@@ -1,8 +1,8 @@
-== Beschreibung
+== Description
 include::presentation.asciidoc[]
 
 '''
-== Konfiguration
+== Configuration
 include::configuration.asciidoc[]
 
 '''
@@ -10,5 +10,5 @@ include::configuration.asciidoc[]
 include::faq.asciidoc[]
 
 '''
-== Änderungsprotokoll
+== Changelog
 include::changelog.asciidoc[]
