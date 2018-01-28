@@ -1,0 +1,51 @@
+{
+    "plugins/dayinfo/desktop/php/dayinfo.php": {
+        "Ajouter un équipement": "Ajouter un équipement",
+        "Rechercher": "Rechercher",
+        "Mes dayinfo": "Mes dayinfo",
+        "Général": "Général",
+        "Lieu dayinfo": "Lieu dayinfo",
+        "Nom de l'équipement dayinfo": "Nom de l'équipement dayinfo",
+        "Objet parent": "Objet parent",
+        "Aucun": "Aucun",
+        "Catégorie": "Catégorie",
+        "Activer": "Activer",
+        "Visible": "Visible",
+        "Commentaire": "Commentaire",
+        "Configuration": "Configuration",
+        "Pays": "Pays",
+        "France": "France",
+        "Belgique": "Belgique",
+        "Suisse": "Suisse",
+        "Canada": "Canada",
+        "Zone": "Zone",
+        "Informations": "Informations",
+        "Nom": "Nom",
+        "Clef": "Clef",
+        "Valeur": "Valeur",
+        "Paramètres": "Paramètres",
+        "Supprimer": "Supprimer",
+        "Sauvegarder": "Sauvegarder",
+        "Configuration avancée": "Configuration avancée",
+        "Equipement": "Equipement",
+        "Commandes": "Commandes"
+    },
+    "plugins/dayinfo/desktop/js/dayinfo.js": {
+        "Nom de l\\'info": "Nom de l\\'info",
+        "Historiser": "Historiser",
+        "Afficher": "Afficher"
+    },
+    "plugins/dayinfo/core/class/dayinfo.class.php": {
+        "Vacances": "Vacances",
+        "Prochaines Vacances": "Prochaines Vacances",
+        "Prochaines Fin Vacances": "Prochaines Fin Vacances",
+        "Label Vacances": "Label Vacances",
+        "Phase de la Lune": "Phase de la Lune",
+        "Age de la Lune": "Age de la Lune",
+        "Prochaine Saison": "Prochaine Saison",
+        "Saison": "Saison",
+        "Weekend": "Weekend",
+        "Férié": "Férié",
+        "Prochain Férié": "Prochain Férié"
+    }
+}
