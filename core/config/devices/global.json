@@ -240,6 +240,22 @@
 				"type": "various"
             },
             "logicalId": "various:weekend"
+        },
+	{
+            "name": "Jour de la semaine",
+            "type": "info",
+            "subtype": "numeric",
+            "display": {
+				"generic_type": "DONT"
+            },
+            "template": {
+					"dashboard": "line",
+					"mobile": "line"
+            },
+            "configuration": {
+				"type": "various"
+            },
+            "logicalId": "various:dayofweek"
         }
     ]
 }
