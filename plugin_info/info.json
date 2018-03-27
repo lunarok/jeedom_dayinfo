@@ -3,8 +3,8 @@
 	"name" : "Infos du Jour",
 	"licence" : "AGPL",
 	"author" : "lunarok",
-	"require" : "2.4",
+	"require" : "3.1",
 	"category" : "organization",
-	"changelog" : "https://lunarok.github.com/jeedom_dayinfo/changelog.html",
-	"documentation" : "https://lunarok.github.com/jeedom_dayinfo/"
+	"changelog" : "https://lunarok.github.io/jeedom_docs/plugins/dayinfo/changelog.html",
+	"documentation" : "https://lunarok.github.io/jeedom_docs/plugins/dayinfo/"
 }
