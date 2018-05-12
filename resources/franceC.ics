@@ -135,7 +135,73 @@ UID:421@education.gouv.fr
 DTSTAMP:20161004T120215Z
 DESCRIPTION:Vacances d'été
 DTSTART;VALUE=DATE:20180707
+DTEND;VALUE=DATE:20180903
 LOCATION:Créteil\, Montpellier\, Paris\, Toulouse\, Versailles
+SUMMARY:Vacances d'été - Zone C
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VEVENT
+UID:442@education.gouv.fr
+DTSTAMP:20180512T170343Z
+DESCRIPTION:Vacances de la Toussaint
+DTSTART;VALUE=DATE:20181021
+DTEND;VALUE=DATE:20181105
+LOCATION:Besançon\, Bordeaux\, Clermont-Ferrand\, Dijon\, Grenoble\, Limog
+ es\, Lyon\, Poitiers
+SUMMARY:Vacances de la Toussaint - Zone C
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:443@education.gouv.fr
+DTSTAMP:20180512T170658Z
+DESCRIPTION:Vacances de Noël
+DTSTART;VALUE=DATE:20181223
+DTEND;VALUE=DATE:20190107
+LOCATION:Besançon\, Bordeaux\, Clermont-Ferrand\, Dijon\, Grenoble\, Limog
+ es\, Lyon\, Poitiers
+SUMMARY:Vacances de Noël - Zone C
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:444@education.gouv.fr
+DTSTAMP:20180512T170815Z
+DESCRIPTION:Vacances d'hiver
+DTSTART;VALUE=DATE:20190224
+DTEND;VALUE=DATE:20190311
+LOCATION:Besançon\, Bordeaux\, Clermont-Ferrand\, Dijon\, Grenoble\, Limog
+ es\, Lyon\, Poitiers
+SUMMARY:Vacances d'hiver - Zone C
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:445@education.gouv.fr
+DTSTAMP:20180512T171016Z
+DESCRIPTION:Vacances de printemps
+DTSTART;VALUE=DATE:20190421
+DTEND;VALUE=DATE:20190506
+LOCATION:Besançon\, Bordeaux\, Clermont-Ferrand\, Dijon\, Grenoble\, Limog
+ es\, Lyon\, Poitiers
+SUMMARY:Vacances de printemps - Zone C
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:446@education.gouv.fr
+DTSTAMP:20180512T171708Z
+DESCRIPTION:Pont de l'Ascension
+DTSTART;VALUE=DATE:20190530
+DTEND;VALUE=DATE:20190602
+LOCATION:Besançon\, Bordeaux\, Clermont-Ferrand\, Dijon\, Grenoble\, Limog
+ es\, Lyon\, Poitiers
+SUMMARY:Pont de l'Ascension - Zone C
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:447@education.gouv.fr
+DTSTAMP:20180512T171425Z
+DESCRIPTION:Vacances d'été
+DTSTART;VALUE=DATE:20190707
+LOCATION:Besançon\, Bordeaux\, Clermont-Ferrand\, Dijon\, Grenoble\, Limog
+ es\, Lyon\, Poitiers
 SUMMARY:Vacances d'été - Zone C
 TRANSP:TRANSPARENT
 END:VEVENT

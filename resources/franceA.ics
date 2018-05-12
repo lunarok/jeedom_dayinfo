@@ -148,9 +148,85 @@ UID:414@education.gouv.fr
 DTSTAMP:20161004T120215Z
 DESCRIPTION:Vacances d'été
 DTSTART;VALUE=DATE:20180707
+DTEND;VALUE=DATE:20180903
 LOCATION:Besançon\, Bordeaux\, Clermont-Ferrand\, Dijon\, Grenoble\, Limog
  es\, Lyon\, Poitiers
 SUMMARY:Vacances d'été - Zone A
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:430@education.gouv.fr
+DTSTAMP:20180512T170354Z
+DESCRIPTION:Vacances de la Toussaint
+DTSTART;VALUE=DATE:20181021
+DTEND;VALUE=DATE:20181105
+LOCATION:Besançon\, Bordeaux\, Clermont-Ferrand\, Dijon\, Grenoble\, Limog
+ es\, Lyon\, Poitiers
+SUMMARY:Vacances de la Toussaint - Zone A
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:431@education.gouv.fr
+DTSTAMP:20180512T170720Z
+DESCRIPTION:Vacances de Noël
+DTSTART;VALUE=DATE:20181223
+DTEND;VALUE=DATE:20190107
+LOCATION:Besançon\, Bordeaux\, Clermont-Ferrand\, Dijon\, Grenoble\, Limog
+ es\, Lyon\, Poitiers
+SUMMARY:Vacances de Noël - Zone A
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:432@education.gouv.fr
+DTSTAMP:20180512T170804Z
+DESCRIPTION:Vacances d'hiver
+DTSTART;VALUE=DATE:20190217
+DTEND;VALUE=DATE:20190304
+LOCATION:Besançon\, Bordeaux\, Clermont-Ferrand\, Dijon\, Grenoble\, Limog
+ es\, Lyon\, Poitiers
+SUMMARY:Vacances d'hiver - Zone A
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:433@education.gouv.fr
+DTSTAMP:20180512T171003Z
+DESCRIPTION:Vacances de printemps
+DTSTART;VALUE=DATE:20190414
+DTEND;VALUE=DATE:20190429
+LOCATION:Besançon\, Bordeaux\, Clermont-Ferrand\, Dijon\, Grenoble\, Limog
+ es\, Lyon\, Poitiers
+SUMMARY:Vacances de printemps - Zone A
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:434@education.gouv.fr
+DTSTAMP:20180512T171406Z
+DESCRIPTION:Pont de l'Ascension
+DTSTART;VALUE=DATE:20190530
+DTEND;VALUE=DATE:20190602
+LOCATION:Besançon\, Bordeaux\, Clermont-Ferrand\, Dijon\, Grenoble\, Limog
+ es\, Lyon\, Poitiers
+SUMMARY:Pont de l'Ascension - Zone A
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:435@education.gouv.fr
+DTSTAMP:20180512T171645Z
+DESCRIPTION:Vacances d'été
+DTSTART;VALUE=DATE:20190707
+LOCATION:Besançon\, Bordeaux\, Clermont-Ferrand\, Dijon\, Grenoble\, Limog
+ es\, Lyon\, Poitiers
+SUMMARY:Vacances d'été - Zone A
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:436@education.gouv.fr
+DTSTAMP:20180512T171645Z
+DESCRIPTION:Pont de l'Ascension
+DTSTART;VALUE=DATE:20190707
+LOCATION:Besançon\, Bordeaux\, Clermont-Ferrand\, Dijon\, Grenoble\, Limog
+ es\, Lyon\, Poitiers
+SUMMARY:Pont de l'Ascension - Zone A
 TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR
