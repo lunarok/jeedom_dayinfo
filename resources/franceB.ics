@@ -6,82 +6,8 @@ X-WR-CALNAME:Calendrier Scolaire - Zone B
 X-WR-CALDESC:Calendrier Scolaire - Zone B
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:343@education.gouv.fr
-DTSTAMP:20161004T120215Z
-DESCRIPTION:Prérentrée des enseignants
-DTSTART;VALUE=DATE:20160831
-LOCATION:Aix-Marseille\, Amiens\, Caen\, Lille\, Nancy-Metz\, Nantes\, Nice
- \, Orléans-Tours\, Reims\, Rennes\, Rouen\, Strasbourg
-SUMMARY:Prérentrée des enseignants - Zone B
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:344@education.gouv.fr
-DTSTAMP:20161004T120215Z
-DESCRIPTION:Rentrée scolaire des élèves
-DTSTART;VALUE=DATE:20160901
-LOCATION:Aix-Marseille\, Amiens\, Caen\, Lille\, Nancy-Metz\, Nantes\, Nice
- \, Orléans-Tours\, Reims\, Rennes\, Rouen\, Strasbourg
-SUMMARY:Rentrée scolaire des élèves - Zone B
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:345@education.gouv.fr
-DTSTAMP:20161004T120215Z
-DESCRIPTION:Vacances de la Toussaint
-DTSTART;VALUE=DATE:20161020
-DTEND;VALUE=DATE:20161103
-LOCATION:Aix-Marseille\, Amiens\, Caen\, Lille\, Nancy-Metz\, Nantes\, Nice
- \, Orléans-Tours\, Reims\, Rennes\, Rouen\, Strasbourg
-SUMMARY:Vacances de la Toussaint - Zone B
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:346@education.gouv.fr
-DTSTAMP:20161004T120215Z
-DESCRIPTION:Vacances de Noël
-DTSTART;VALUE=DATE:20161217
-DTEND;VALUE=DATE:20170103
-LOCATION:Aix-Marseille\, Amiens\, Caen\, Lille\, Nancy-Metz\, Nantes\, Nice
- \, Orléans-Tours\, Reims\, Rennes\, Rouen\, Strasbourg
-SUMMARY:Vacances de Noël - Zone B
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:347@education.gouv.fr
-DTSTAMP:20161004T120215Z
-DESCRIPTION:Vacances d'hiver
-DTSTART;VALUE=DATE:20170211
-DTEND;VALUE=DATE:20170227
-LOCATION:Aix-Marseille\, Amiens\, Caen\, Lille\, Nancy-Metz\, Nantes\, Nice
- \, Orléans-Tours\, Reims\, Rennes\, Rouen\, Strasbourg
-SUMMARY:Vacances d'hiver - Zone B
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:348@education.gouv.fr
-DTSTAMP:20161004T120215Z
-DESCRIPTION:Vacances de printemps
-DTSTART;VALUE=DATE:20170408
-DTEND;VALUE=DATE:20170424
-LOCATION:Aix-Marseille\, Amiens\, Caen\, Lille\, Nancy-Metz\, Nantes\, Nice
- \, Orléans-Tours\, Reims\, Rennes\, Rouen\, Strasbourg
-SUMMARY:Vacances de printemps - Zone B
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:349@education.gouv.fr
-DTSTAMP:20161004T120215Z
-DESCRIPTION:Vacances d'été
-DTSTART;VALUE=DATE:20170708
-LOCATION:Aix-Marseille\, Amiens\, Caen\, Lille\, Nancy-Metz\, Nantes\, Nice
- \, Orléans-Tours\, Reims\, Rennes\, Rouen\, Strasbourg
-SUMMARY:Vacances d'été - Zone B
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:422@education.gouv.fr
-DTSTAMP:20161004T120215Z
+DTSTAMP:20170720T145803Z
 DESCRIPTION:Prérentrée des enseignants
 DTSTART;VALUE=DATE:20170901
 LOCATION:Aix-Marseille\, Amiens\, Caen\, Lille\, Nancy-Metz\, Nantes\, Nice
@@ -91,7 +17,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:423@education.gouv.fr
-DTSTAMP:20161004T120215Z
+DTSTAMP:20170720T145803Z
 DESCRIPTION:Rentrée scolaire des élèves
 DTSTART;VALUE=DATE:20170904
 LOCATION:Aix-Marseille\, Amiens\, Caen\, Lille\, Nancy-Metz\, Nantes\, Nice
@@ -101,7 +27,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:424@education.gouv.fr
-DTSTAMP:20161004T120215Z
+DTSTAMP:20170720T145803Z
 DESCRIPTION:Vacances de la Toussaint
 DTSTART;VALUE=DATE:20171021
 DTEND;VALUE=DATE:20171106
@@ -112,7 +38,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:425@education.gouv.fr
-DTSTAMP:20161004T120215Z
+DTSTAMP:20170720T145803Z
 DESCRIPTION:Vacances de Noël
 DTSTART;VALUE=DATE:20171223
 DTEND;VALUE=DATE:20180108
@@ -123,7 +49,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:426@education.gouv.fr
-DTSTAMP:20161004T120215Z
+DTSTAMP:20170720T145803Z
 DESCRIPTION:Vacances d'hiver
 DTSTART;VALUE=DATE:20180224
 DTEND;VALUE=DATE:20180312
@@ -134,7 +60,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:427@education.gouv.fr
-DTSTAMP:20161004T120215Z
+DTSTAMP:20170720T145803Z
 DESCRIPTION:Vacances de printemps
 DTSTART;VALUE=DATE:20180421
 DTEND;VALUE=DATE:20180507
@@ -145,9 +71,83 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:428@education.gouv.fr
-DTSTAMP:20161004T120215Z
+DTSTAMP:20170720T145803Z
 DESCRIPTION:Vacances d'été
 DTSTART;VALUE=DATE:20180707
+LOCATION:Aix-Marseille\, Amiens\, Caen\, Lille\, Nancy-Metz\, Nantes\, Nice
+ \, Orléans-Tours\, Reims\, Rennes\, Rouen\, Strasbourg
+SUMMARY:Vacances d'été - Zone B
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:565@education.gouv.fr
+DTSTAMP:20170720T145803Z
+DESCRIPTION:Prérentrée des enseignants
+DTSTART;VALUE=DATE:20180831
+LOCATION:Aix-Marseille\, Amiens\, Caen\, Lille\, Nancy-Metz\, Nantes\, Nice
+ \, Orléans-Tours\, Reims\, Rennes\, Rouen\, Strasbourg
+SUMMARY:Prérentrée des enseignants - Zone B
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:566@education.gouv.fr
+DTSTAMP:20170720T145803Z
+DESCRIPTION:Rentrée scolaire des élèves
+DTSTART;VALUE=DATE:20180903
+LOCATION:Aix-Marseille\, Amiens\, Caen\, Lille\, Nancy-Metz\, Nantes\, Nice
+ \, Orléans-Tours\, Reims\, Rennes\, Rouen\, Strasbourg
+SUMMARY:Rentrée scolaire des élèves - Zone B
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:567@education.gouv.fr
+DTSTAMP:20170720T145803Z
+DESCRIPTION:Vacances de la Toussaint
+DTSTART;VALUE=DATE:20181020
+DTEND;VALUE=DATE:20181105
+LOCATION:Aix-Marseille\, Amiens\, Caen\, Lille\, Nancy-Metz\, Nantes\, Nice
+ \, Orléans-Tours\, Reims\, Rennes\, Rouen\, Strasbourg
+SUMMARY:Vacances de la Toussaint - Zone B
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:568@education.gouv.fr
+DTSTAMP:20170720T145803Z
+DESCRIPTION:Vacances de Noël
+DTSTART;VALUE=DATE:20181222
+DTEND;VALUE=DATE:20190107
+LOCATION:Aix-Marseille\, Amiens\, Caen\, Lille\, Nancy-Metz\, Nantes\, Nice
+ \, Orléans-Tours\, Reims\, Rennes\, Rouen\, Strasbourg
+SUMMARY:Vacances de Noël - Zone B
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:569@education.gouv.fr
+DTSTAMP:20170720T145803Z
+DESCRIPTION:Vacances d'hiver
+DTSTART;VALUE=DATE:20190209
+DTEND;VALUE=DATE:20190225
+LOCATION:Aix-Marseille\, Amiens\, Caen\, Lille\, Nancy-Metz\, Nantes\, Nice
+ \, Orléans-Tours\, Reims\, Rennes\, Rouen\, Strasbourg
+SUMMARY:Vacances d'hiver - Zone B
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:570@education.gouv.fr
+DTSTAMP:20170720T145803Z
+DESCRIPTION:Vacances de printemps
+DTSTART;VALUE=DATE:20190406
+DTEND;VALUE=DATE:20190423
+LOCATION:Aix-Marseille\, Amiens\, Caen\, Lille\, Nancy-Metz\, Nantes\, Nice
+ \, Orléans-Tours\, Reims\, Rennes\, Rouen\, Strasbourg
+SUMMARY:Vacances de printemps - Zone B
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:571@education.gouv.fr
+DTSTAMP:20170720T145803Z
+DESCRIPTION:Vacances d'été
+DTSTART;VALUE=DATE:20190706
 LOCATION:Aix-Marseille\, Amiens\, Caen\, Lille\, Nancy-Metz\, Nantes\, Nice
  \, Orléans-Tours\, Reims\, Rennes\, Rouen\, Strasbourg
 SUMMARY:Vacances d'été - Zone B
