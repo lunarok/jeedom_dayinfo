@@ -426,6 +426,9 @@ class dayinfo extends eqLogic {
 
 class dayinfoCmd extends cmd {
     public function execute($_options = null) {
+      if ($this->getLogicalId() == 'refresh') {
+        $this->getEqLogic()->getInformations();
+      }
     }
 
 }
