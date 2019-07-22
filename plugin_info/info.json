@@ -4,7 +4,7 @@
 	"description" : "Ce plugin permet de disposer des informations suivantes, sans connexion externe nécessaire : week-end en cours, jour férié en cours, nombre de jours avant le prochain jour férié, saison en cours, nombre de jours avant prochaine saison, vacances en cours, label des vacances, nombre de jours avant les prochaines vacances, nombre de jours avant la fin des prochaines vacances, phase de la lune, age de la lune",
 	"licence" : "AGPL",
 	"author" : "lunarok",
-	"require" : "3.1",
+	"require" : "3.3.24",
 	"category" : "organization",
 	"language" : ["fr_FR","en_US"],
 	"compatibility" : ["miniplus","smart","rpi","docker","diy","mobile"],
