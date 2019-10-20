@@ -54,6 +54,7 @@ class dayinfo extends eqLogic {
         }
         if ($this->getConfiguration('type') == 'various') {
             $this->isTodayWeekend();
+            $this->numberDay();
             $this->whatSeason();
         }
         if ($this->getConfiguration('type') == 'global') {
@@ -62,6 +63,7 @@ class dayinfo extends eqLogic {
             $this->isNotWorkable();
             $this->getDifftoNextHoliday();
             $this->isTodayWeekend();
+            $this->numberDay();
             $this->whatSeason();
         }
 
@@ -228,6 +230,13 @@ class dayinfo extends eqLogic {
         $weekend = ($currentDate->format('N') >= 6) ? 1 : 0;
         $this->checkAndUpdateCmd('various:weekend', $weekend);
         log::add('dayinfo', 'debug', 'Weekend ' . $weekend);
+    }
+
+    //Day of the year
+    public function numberDay() {
+        $daynumber = date('z');
+        $this->checkAndUpdateCmd('various:daynumber', $daynumber);
+        log::add('dayinfo', 'debug', 'Weekend ' . $daynumber);
     }
 
     // Season
