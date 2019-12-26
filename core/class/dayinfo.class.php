@@ -125,7 +125,7 @@ class dayinfo extends eqLogic {
             $holidays[] = mktime(0, 0, 0, $easterMonth, $easterDay + 39, $easterYear); // Ascension
             $holidays[] = mktime(0, 0, 0, $easterMonth, $easterDay + 50, $easterYear); // Lundi Pentecote
 
-            if ($region == "57" || $region == "67" || $region == "90") {
+            if ($region == "57" || $region == "67" || $region == "68" || $region == "90") {
                 $holidays[] = mktime(0, 0, 0, $easterMonth, $easterDay - 2,  $easterYear); // Vendredi Saint
                 $holidays[] = mktime(0, 0, 0, 12, 26, $year);  // Saint Etienne
             } else if ($region == "972") {
