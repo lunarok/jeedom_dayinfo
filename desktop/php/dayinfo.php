@@ -24,7 +24,7 @@ $eqLogics = eqLogic::byType('dayinfo');
 
   <div class="col-lg-12 eqLogicThumbnailDisplay" id="listCol">
   <input class="form-control" placeholder="{{Rechercher}}" id="in_searchEqlogic" />
-      <legend>{{Mes dayinfo}}</legend>
+      <legend><i class="fas fa-home" id="butCol"></i>{{Mes dayinfo}}</legend>
     <div class="eqLogicThumbnailContainer">
       <div class="cursor eqLogicAction" data-action="add" style="background-color : #ffffff; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;" >
         <center>
