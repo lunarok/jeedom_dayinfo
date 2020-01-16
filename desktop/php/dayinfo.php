@@ -23,29 +23,32 @@ $eqLogics = eqLogic::byType('dayinfo');
   </div>
 
   <div class="col-lg-12 eqLogicThumbnailDisplay" id="listCol">
-  <input class="form-control" placeholder="{{Rechercher}}" id="in_searchEqlogic" />
-      <legend><i class="fas fa-home" id="butCol"></i>{{Mes dayinfo}}</legend>
+
+    <legend><i class="fas fa-cog"></i>  {{Gestion}}</legend>
     <div class="eqLogicThumbnailContainer">
-      <div class="cursor eqLogicAction" data-action="add" style="background-color : #ffffff; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;" >
-        <center>
-          <i class="fas fa-plus-circle" style="font-size : 7em;color:#00979c;"></i>
-        </center>
-        <span style="font-size : 1.1em;position:relative; top : 15px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;"><center>Ajouter</center></span>
+      <div class="cursor eqLogicAction" data-action="add">
+          <i class="fas fa-plus-circle" style="color:#00979c;"></i>
+          <br/>
+        <span style="color:#00979c">{{Ajouter}}</span>
       </div>
+
+      <div class="cursor eqLogicAction" data-action="gotoPluginConf">
+          <i class="fas fa-wrench" style="font-size : 6em;color:#00979c;"></i>
+          <br/>
+        <span style="color:#00979c">{{Configuration}}></span>
+      </div>
+
+    <input class="form-control" placeholder="{{Rechercher}}" id="in_searchEqlogic" />
+
+
+    <legend><i class="fas fa-home" id="butCol"></i>  {{Mes Equipements}}</legend>
+    <div class="eqLogicThumbnailContainer">
       <?php
-      $dir = dirname(__FILE__) . '/../../doc/images/';
-      $files = scandir($dir);
       foreach ($eqLogics as $eqLogic) {
         $opacity = ($eqLogic->getIsEnable()) ? '' : jeedom::getConfiguration('eqLogic:style:noactive');
         echo '<div class="eqLogicDisplayCard cursor" data-eqLogic_id="' . $eqLogic->getId() . '" style="background-color : #ffffff ; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;' . $opacity . '" >';
         echo "<center>";
-        $test = $eqLogic->getConfiguration('type') . '.png';
-        if (in_array($test, $files)) {
-          $path = $eqLogic->getConfiguration('type');
-        } else {
-          $path = 'dayinfo_icon';
-        }
-        echo '<img src="plugins/dayinfo/doc/images/' . $path . '.png" height="105" width="95" />';
+        echo '<img src="plugins/ghlocal/plugin_info/ghlocal_icon.png" height="105" width="95" />';
         echo "</center>";
         echo '<span style="font-size : 1.1em;position:relative; top : 15px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;"><center>' . $eqLogic->getHumanName(true, true) . '</center></span>';
         echo '</div>';
