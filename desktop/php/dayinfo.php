@@ -35,9 +35,9 @@ $eqLogics = eqLogic::byType('dayinfo');
       <div class="cursor eqLogicAction" data-action="gotoPluginConf">
           <i class="fas fa-wrench" style="font-size : 6em;color:#00979c;"></i>
           <br/>
-        <span style="color:#00979c">{{Configuration}}></span>
+        <span style="color:#00979c">{{Configuration}}</span>
       </div>
-
+    </div>
     <input class="form-control" placeholder="{{Rechercher}}" id="in_searchEqlogic" />
 
 
@@ -48,7 +48,7 @@ $eqLogics = eqLogic::byType('dayinfo');
         $opacity = ($eqLogic->getIsEnable()) ? '' : jeedom::getConfiguration('eqLogic:style:noactive');
         echo '<div class="eqLogicDisplayCard cursor" data-eqLogic_id="' . $eqLogic->getId() . '" style="background-color : #ffffff ; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;' . $opacity . '" >';
         echo "<center>";
-        echo '<img src="plugins/ghlocal/plugin_info/ghlocal_icon.png" height="105" width="95" />';
+        echo '<img src="plugins/dayinfo/plugin_info/dayinfo_icon.png" height="105" width="95" />';
         echo "</center>";
         echo '<span style="font-size : 1.1em;position:relative; top : 15px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;"><center>' . $eqLogic->getHumanName(true, true) . '</center></span>';
         echo '</div>';
