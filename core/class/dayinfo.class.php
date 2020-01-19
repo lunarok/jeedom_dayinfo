@@ -301,7 +301,6 @@ class dayinfo extends eqLogic {
           } else {
             $country = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:country')->execCmd();
           }
-        $country = strtolower(geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:country')->execCmd());
         $holiday = '0';
         $nholiday = '-';
         $nextlabel = '-';
