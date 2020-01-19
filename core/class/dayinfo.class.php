@@ -246,7 +246,6 @@ class dayinfo extends eqLogic {
           } else {
             $country = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:country')->execCmd();
           }
-        $region = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:department')->execCmd();
         $next_holiday = dayinfo::getNextHoliday($country,$region);
         $date_next_holiday = new DateTime(date('Y-m-d', $next_holiday));
         $current_date = new DateTime('today');
