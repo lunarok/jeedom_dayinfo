@@ -86,7 +86,7 @@ class dayinfo extends eqLogic {
     public function isNotWorkable(){
         if ($this->getConfiguration('geoloc') == "jeedom") {
             $postal = config::byKey('info::postalCode');
-            $departement = $postal[0] . $postal[1];
+            $region = $postal[0] . $postal[1];
             $stateCode = strtolower(config::byKey('info::stateCode'));
             if ($staeCode == 'fr') {
                 $country = "france";
@@ -100,7 +100,7 @@ class dayinfo extends eqLogic {
                 $country = $stateCode;
             }
           } else {
-            $departement = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:department')->execCmd();
+            $region = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:department')->execCmd();
             $country = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:country')->execCmd();
           }
         $timestamp = strtotime("today");
@@ -231,6 +231,8 @@ class dayinfo extends eqLogic {
 
     public function getDifftoNextHoliday($format="%a")		{
         if ($this->getConfiguration('geoloc') == "jeedom") {
+            $postal = config::byKey('info::postalCode');
+            $region = $postal[0] . $postal[1];
             $stateCode = strtolower(config::byKey('info::stateCode'));
             if ($staeCode == 'fr') {
                 $country = "france";
@@ -244,6 +246,7 @@ class dayinfo extends eqLogic {
                 $country = $stateCode;
             }
           } else {
+            $region = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:department')->execCmd();
             $country = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:country')->execCmd();
           }
         $next_holiday = dayinfo::getNextHoliday($country,$region);
