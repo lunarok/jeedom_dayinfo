@@ -84,9 +84,25 @@ class dayinfo extends eqLogic {
     }
 
     public function isNotWorkable(){
-        //  $departement = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:department')->execCmd();
-        $country = strtolower(geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:country')->execCmd());
-        $region = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:department')->execCmd();
+        if ($this->getConfiguration('geoloc') == "jeedom") {
+            $postal = config::byKey('info::postalCode');
+            $departement = $postal[0] . $postal[1];
+            $stateCode = strtolower(config::byKey('info::stateCode'));
+            if ($staeCode == 'fr') {
+                $country = "france";
+            } else if ($staeCode == 'be') {
+                $country = "belgique";
+            } else if ($staeCode == 'ch') {
+                $country = "suisse";
+            } else if ($staeCode == 'CA') {
+                $country = "canada";
+            } else {
+                $country = $stateCode;
+            }
+          } else {
+            $departement = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:department')->execCmd();
+            $country = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:country')->execCmd();
+          }
         $timestamp = strtotime("today");
         $year = date("Y", $timestamp);
         $holidays = dayinfo::getHolidays($country,$region,$year);
@@ -269,13 +285,34 @@ class dayinfo extends eqLogic {
 
     // Vacances scolaires
     public function whatHolidays() {
+        if ($this->getConfiguration('geoloc') == "jeedom") {
+            $stateCode = strtolower(config::byKey('info::stateCode'));
+            if ($staeCode == 'fr') {
+                $country = "france";
+            } else if ($staeCode == 'be') {
+                $country = "belgique";
+            } else if ($staeCode == 'ch') {
+                $country = "suisse";
+            } else if ($staeCode == 'CA') {
+                $country = "canada";
+            } else {
+                $country = $stateCode;
+            }
+          } else {
+            $country = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:country')->execCmd();
+          }
         $country = strtolower(geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:country')->execCmd());
         $holiday = '0';
         $nholiday = '-';
         $nextlabel = '-';
         //build calendar ID
         if ($country == 'france') {
+            if ($this->getConfiguration('geoloc') == "jeedom") {
+            $postal = config::byKey('info::postalCode');
+            $departement = $postal[0] . $postal[1];
+          } else {
             $departement = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:department')->execCmd();
+          }
             if (strpos($departement,'97') == true) {
                 log::add('dayinfo', 'error', 'Calendrier des DOM TOM non pris en charge');
                 return;
