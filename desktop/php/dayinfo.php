@@ -132,16 +132,23 @@ $eqLogics = eqLogic::byType('dayinfo');
               <div class="col-sm-3">
                 <select class="form-control eqLogicAttr configuration" data-l1key="configuration" data-l2key="geoloc">
                   <?php
-                  if (class_exists('geotravCmd')) {
-                    foreach (eqLogic::byType('geotrav') as $geoloc) {
-                      if ($geoloc->getConfiguration('type') == 'location') {
-                        echo '<option value="' . $geoloc->getId() . '">' . $geoloc->getName() . '</option>';
-                      }
-                    }
-                  } else {
-                    echo '<option value="">Pas de localisation disponible</option>';
-                  }
-                  ?>
+                                    $none = 0;
+                                    if (class_exists('geotravCmd')) {
+                                        foreach (eqLogic::byType('geotrav') as $geoloc) {
+                                            if ($geoloc->getConfiguration('type') == 'location') {
+                                                $none = 1;
+                                                echo '<option value="' . $geoloc->getId() . '">' . $geoloc->getName() . '</option>';
+                                            }
+                                        }
+                                    } 
+                                    if ((config::byKey('info::latitude') != '') && (config::byKey('info::longitude') != '') && (config::byKey('info::postalCode') != '') && (config::byKey('info::stateCode') != '')) {
+                                        echo '<option value="jeedom">Configuration Jeedom</option>';
+                                        $none = 1;
+                                    }
+                                    if ($none == 0) {
+                                        echo '<option value="">Pas de localisation disponible</option>';
+                                    }
+                                    ?>
                 </select>
               </div>
             </div>
