@@ -230,7 +230,22 @@ class dayinfo extends eqLogic {
     }
 
     public function getDifftoNextHoliday($format="%a")		{
-        $country = strtolower(geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:country')->execCmd());
+        if ($this->getConfiguration('geoloc') == "jeedom") {
+            $stateCode = strtolower(config::byKey('info::stateCode'));
+            if ($staeCode == 'fr') {
+                $country = "france";
+            } else if ($staeCode == 'be') {
+                $country = "belgique";
+            } else if ($staeCode == 'ch') {
+                $country = "suisse";
+            } else if ($staeCode == 'CA') {
+                $country = "canada";
+            } else {
+                $country = $stateCode;
+            }
+          } else {
+            $country = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:country')->execCmd();
+          }
         $region = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:department')->execCmd();
         $next_holiday = dayinfo::getNextHoliday($country,$region);
         $date_next_holiday = new DateTime(date('Y-m-d', $next_holiday));
