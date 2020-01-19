@@ -88,13 +88,13 @@ class dayinfo extends eqLogic {
             $postal = config::byKey('info::postalCode');
             $region = $postal[0] . $postal[1];
             $stateCode = strtolower(config::byKey('info::stateCode'));
-            if ($staeCode == 'fr') {
+            if ($stateCode == 'fr') {
                 $country = "france";
-            } else if ($staeCode == 'be') {
+            } else if ($stateCode == 'be') {
                 $country = "belgique";
-            } else if ($staeCode == 'ch') {
+            } else if ($stateCode == 'ch') {
                 $country = "suisse";
-            } else if ($staeCode == 'CA') {
+            } else if ($stateCode == 'CA') {
                 $country = "canada";
             } else {
                 $country = $stateCode;
@@ -234,13 +234,13 @@ class dayinfo extends eqLogic {
             $postal = config::byKey('info::postalCode');
             $region = $postal[0] . $postal[1];
             $stateCode = strtolower(config::byKey('info::stateCode'));
-            if ($staeCode == 'fr') {
+            if ($stateCode == 'fr') {
                 $country = "france";
-            } else if ($staeCode == 'be') {
+            } else if ($stateCode == 'be') {
                 $country = "belgique";
-            } else if ($staeCode == 'ch') {
+            } else if ($stateCode == 'ch') {
                 $country = "suisse";
-            } else if ($staeCode == 'CA') {
+            } else if ($stateCode == 'CA') {
                 $country = "canada";
             } else {
                 $country = $stateCode;
@@ -304,13 +304,13 @@ class dayinfo extends eqLogic {
     public function whatHolidays() {
         if ($this->getConfiguration('geoloc') == "jeedom") {
             $stateCode = strtolower(config::byKey('info::stateCode'));
-            if ($staeCode == 'fr') {
+            if ($stateCode == 'fr') {
                 $country = "france";
-            } else if ($staeCode == 'be') {
+            } else if ($stateCode == 'be') {
                 $country = "belgique";
-            } else if ($staeCode == 'ch') {
+            } else if ($stateCode == 'ch') {
                 $country = "suisse";
-            } else if ($staeCode == 'CA') {
+            } else if ($stateCode == 'CA') {
                 $country = "canada";
             } else {
                 $country = $stateCode;
