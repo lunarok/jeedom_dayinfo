@@ -94,14 +94,14 @@ class dayinfo extends eqLogic {
                 $country = "belgique";
             } else if ($stateCode == 'ch') {
                 $country = "suisse";
-            } else if ($stateCode == 'CA') {
+            } else if ($stateCode == 'ca') {
                 $country = "canada";
             } else {
                 $country = $stateCode;
             }
           } else {
             $region = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:department')->execCmd();
-            $country = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:country')->execCmd();
+            $country = strtolower(geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:country')->execCmd());
           }
         $timestamp = strtotime("today");
         $year = date("Y", $timestamp);
@@ -316,7 +316,7 @@ class dayinfo extends eqLogic {
                 $country = $stateCode;
             }
           } else {
-            $country = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:country')->execCmd();
+            $country = strtolower(geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:country')->execCmd());
           }
         $holiday = '0';
         $nholiday = '-';
