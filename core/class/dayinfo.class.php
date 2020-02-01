@@ -240,14 +240,14 @@ class dayinfo extends eqLogic {
                 $country = "belgique";
             } else if ($stateCode == 'ch') {
                 $country = "suisse";
-            } else if ($stateCode == 'CA') {
+            } else if ($stateCode == 'ca') {
                 $country = "canada";
             } else {
                 $country = $stateCode;
             }
           } else {
             $region = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:department')->execCmd();
-            $country = geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:country')->execCmd();
+            $country = strtolower(geotravCmd::byEqLogicIdAndLogicalId($this->getConfiguration('geoloc'),'location:country')->execCmd());
           }
         $next_holiday = dayinfo::getNextHoliday($country,$region);
         $date_next_holiday = new DateTime(date('Y-m-d', $next_holiday));
