@@ -267,7 +267,7 @@ class dayinfo extends eqLogic {
 
     //Day of the year
     public function numberDay() {
-        $daynumber = date('z');
+        $daynumber = date('z')+1;
         $this->checkAndUpdateCmd('various:daynumber', $daynumber);
         log::add('dayinfo', 'debug', 'Weekend ' . $daynumber);
     }
