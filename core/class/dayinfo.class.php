@@ -310,7 +310,7 @@ class dayinfo extends eqLogic {
                 $country = "belgique";
             } else if ($stateCode == 'ch') {
                 $country = "suisse";
-            } else if ($stateCode == 'CA') {
+            } else if ($stateCode == 'ca') {
                 $country = "canada";
             } else {
                 $country = $stateCode;
