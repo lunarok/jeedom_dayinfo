@@ -115,7 +115,7 @@ class dayinfo extends eqLogic {
     * Cette fonction retourne un tableau de timestamp correspondant
     * aux jours fériés en France pour une année donnée.
     */
-    public function getHolidays($country,$region, $year=null)		{
+    public static function getHolidays($country,$region, $year=null)		{
         if ($year === null) $year = date("Y");
 
         $easterDate  = easter_date($year);
@@ -207,7 +207,7 @@ class dayinfo extends eqLogic {
         return $holidays;
     }
 
-    public function nextHoliday($country,$region,$year=null)	{
+    public static function nextHoliday($country,$region,$year=null)	{
         $now = time();
         $next_holiday = null;
         $holidays = dayinfo::getHolidays($country,$region,$year);
@@ -220,7 +220,7 @@ class dayinfo extends eqLogic {
         return $next_holiday;
     }
 
-    public function getNextHoliday($country,$region)		{
+    public static function getNextHoliday($country,$region)		{
         $next_holiday = dayinfo::nextHoliday($country,$region); // get first next holiday for current year
         if ($next_holiday === null) { // no holiday for current year
             $next_year = date("Y") + 1; // next year
