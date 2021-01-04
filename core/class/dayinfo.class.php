@@ -357,6 +357,7 @@ class dayinfo extends eqLogic {
         $diffday = 365;
         $diffend = 365;
         $finete = date_create(mktime(0, 0, 0, 1,  1));
+        $debutete = $finete;
 
         foreach ($events as $event) {
             if (isset($event['DTEND'])) {
