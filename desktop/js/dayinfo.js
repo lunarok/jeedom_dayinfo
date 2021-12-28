@@ -14,21 +14,21 @@
 * You should have received a copy of the GNU General Public License
 * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
 */
-$('#typeEq').change(function(){
+$('#typeEq').change(function () {
   var text = $("#typeEq").val();
   if (text == 'holidays' || text == 'bankdays' || text == 'global') {
     $('#cmdgeoloc').show();
-} else {
+  } else {
     $('#cmdgeoloc').hide();
   }
   if (text == 'calendar') {
     $('#calendar').show();
-} else {
+  } else {
     $('#calendar').hide();
   }
 });
 
-$("#butCol").click(function(){
+$("#butCol").click(function () {
   $("#hidCol").toggle("slow");
   document.getElementById("listCol").classList.toggle('col-lg-12');
   document.getElementById("listCol").classList.toggle('col-lg-10');
@@ -37,7 +37,7 @@ $("#butCol").click(function(){
 $(".li_eqLogic").on('click', function (event) {
   if (event.ctrlKey) {
     var type = $('body').attr('data-page')
-    var url = '/index.php?v=d&m='+type+'&p='+type+'&id='+$(this).attr('data-eqlogic_id')
+    var url = '/index.php?v=d&m=' + type + '&p=' + type + '&id=' + $(this).attr('data-eqlogic_id')
     window.open(url).focus()
   } else {
     jeedom.eqLogic.cache.getCmd = Array();
@@ -59,14 +59,14 @@ $(".li_eqLogic").on('click', function (event) {
     jeedom.eqLogic.print({
       type: isset($(this).attr('data-eqLogic_type')) ? $(this).attr('data-eqLogic_type') : eqType,
       id: $(this).attr('data-eqLogic_id'),
-      status : 1,
+      status: 1,
       error: function (error) {
         $.hideLoading();
-        $('#div_alert').showAlert({message: error.message, level: 'danger'});
+        $('#div_alert').showAlert({ message: error.message, level: 'danger' });
       },
       success: function (data) {
         $('body .eqLogicAttr').value('');
-        if(isset(data) && isset(data.timeout) && data.timeout == 0){
+        if (isset(data) && isset(data.timeout) && data.timeout == 0) {
           data.timeout = '';
         }
         $('body').setValues(data, '.eqLogicAttr');
@@ -86,12 +86,12 @@ $(".li_eqLogic").on('click', function (event) {
         $('body').delegate('.cmd .cmdAttr[data-l1key=subType]', 'change', function () {
           jeedom.cmd.changeSubType($(this).closest('.cmd'));
         });
-        addOrUpdateUrl('id',data.id);
+        addOrUpdateUrl('id', data.id);
         $.hideLoading();
         modifyWithoutSave = false;
-        setTimeout(function(){
+        setTimeout(function () {
           modifyWithoutSave = false;
-        },1000)
+        }, 1000)
       }
     });
   }
@@ -99,40 +99,47 @@ $(".li_eqLogic").on('click', function (event) {
 });
 
 function addCmdToTable(_cmd) {
-    if (!isset(_cmd)) {
-        var _cmd = {configuration: {}};
-    }
-    if (!isset(_cmd.configuration)) {
-        _cmd.configuration = {};
-    }
+  if (!isset(_cmd)) {
+    var _cmd = { configuration: {} };
+  }
+  if (!isset(_cmd.configuration)) {
+    _cmd.configuration = {};
+  }
 
-    if (init(_cmd.type) == 'info') {
-        var disabled = (init(_cmd.configuration.virtualAction) == '1') ? 'disabled' : '';
-        var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '">';
-        tr += '<td>';
-        tr += '<span class="cmdAttr" data-l1key="id"></span>';
-        tr += '</td>';
-        tr += '<td>';
-        tr += '<input class="cmdAttr form-control input-sm" data-l1key="name" style="width : 140px;" placeholder="{{Nom de l\'info}}"></td>';
-        tr += '<td>';
-        tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isVisible" checked/>{{Afficher}}</label></span> ';
-        if (_cmd.subType == 'numeric' || _cmd.subType == 'binary') {
-            tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isHistorized" checked/>{{Historiser}}</label></span> ';
-        }
-        tr += '</td>';
-        tr += '<td>';
-        if (is_numeric(_cmd.id)) {
-            tr += '<a class="btn btn-default btn-xs cmdAction" data-action="configure"><i class="fas fa-cogs"></i></a> ';
-            tr += '<a class="btn btn-default btn-xs cmdAction" data-action="test"><i class="fas fa-rss"></i> {{Tester}}</a>';
-        }
-        tr += '</td>';
-        tr += '</tr>';
-        $('#table_cmd tbody').append(tr);
-        $('#table_cmd tbody tr:last').setValues(_cmd, '.cmdAttr');
-        /*if (isset(_cmd.type)) {
-        $('#table_cmd tbody tr:last .cmdAttr[data-l1key=type]').value(init(_cmd.type));
+  if (init(_cmd.type) == 'info') {
+    var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '">';
+    tr += '<td>';
+    tr += '<span class="cmdAttr" data-l1key="id"></span>';
+    tr += '</td>';
+    tr += '<td>';
+    tr += '<div class="row">';
+    tr += '<div class="col-xs-7">';
+    tr += '<input class="cmdAttr form-control input-sm" data-l1key="name" placeholder="{{Nom de la commande}}">';
+    tr += '</div>';
+    tr += '<div class="col-xs-5">';
+    tr += '<a class="cmdAction btn btn-default btn-sm" data-l1key="chooseIcon"><i class="fas fa-flag"></i> {{Icône}}</a>';
+    tr += '<span class="cmdAttr" data-l1key="display" data-l2key="icon" style="margin-left : 10px;"></span>';
+    tr += '</div>';
+    tr += '</div>';
+    tr += '<td>';
+    tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isVisible" checked/>{{Afficher}}</label></span> ';
+    if (_cmd.subType == 'numeric' || _cmd.subType == 'binary') {
+      tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isHistorized" checked/>{{Historiser}}</label></span> ';
     }
-    jeedom.cmd.changeType($('#table_cmd tbody tr:last'), init(_cmd.subType));*/
+    tr += '</td>';
+    tr += '<td>';
+    if (is_numeric(_cmd.id)) {
+      tr += '<a class="btn btn-default btn-xs cmdAction" data-action="configure"><i class="fas fa-cogs"></i></a> ';
+      tr += '<a class="btn btn-default btn-xs cmdAction" data-action="test"><i class="fas fa-rss"></i> {{Tester}}</a>';
+    }
+    tr += '</td>';
+    tr += '</tr>';
+    $('#table_cmd tbody').append(tr);
+    $('#table_cmd tbody tr:last').setValues(_cmd, '.cmdAttr');
+    /*if (isset(_cmd.type)) {
+    $('#table_cmd tbody tr:last .cmdAttr[data-l1key=type]').value(init(_cmd.type));
 }
+jeedom.cmd.changeType($('#table_cmd tbody tr:last'), init(_cmd.subType));*/
+  }
 
 }
