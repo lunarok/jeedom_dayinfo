@@ -66,6 +66,38 @@
             "logicalId": "various:daynumber"
         },
         {
+         "name": "Occurence de ce jour de semaine dans le mois",
+         "type": "info",
+         "subtype": "numeric",
+         "display": {
+         "generic_type": "DONT"
+         },
+         "template": {
+            "dashboard": "line",
+            "mobile": "line"
+         },
+         "configuration": {
+         "type": "various"
+         },
+         "logicalId": "various:occurence"
+     },
+     {
+      "name": "Dernière occurence de ce jour de semaine dans le mois",
+      "type": "info",
+      "subtype": "binary",
+      "display": {
+      "generic_type": "DONT"
+      },
+      "template": {
+         "dashboard": "line",
+         "mobile": "line"
+      },
+      "configuration": {
+      "type": "various"
+      },
+      "logicalId": "various:lastOccurence"
+  },
+        {
             "name": "Rafraichir",
             "type": "action",
             "subtype": "other",

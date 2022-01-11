@@ -56,6 +56,8 @@ class dayinfo extends eqLogic {
             $this->isTodayWeekend();
             $this->numberDay();
             $this->whatSeason();
+            $this->dayLastOccurence();
+            $this->dayOccurence();
         }
         if ($this->getConfiguration('type') == 'global') {
             $this->whatMoon();
@@ -65,6 +67,8 @@ class dayinfo extends eqLogic {
             $this->isTodayWeekend();
             $this->numberDay();
             $this->whatSeason();
+            $this->dayLastOccurence();
+            $this->dayOccurence();
         }
 
     }
@@ -281,6 +285,25 @@ class dayinfo extends eqLogic {
         log::add('dayinfo', 'debug', 'Next Season ' . $nseason);
         $this->checkAndUpdateCmd('various:season', $aseason);
         $this->checkAndUpdateCmd('various:nextseason', $nseason);
+    }
+
+    //occurence of day of the week in month
+    public function dayOccurence() {
+        $occurence = date("j")/7;
+        log::add('dayinfo', 'debug', 'Occurence ' . $occurence);
+        $this->checkAndUpdateCmd('various:occurence', ceil($occurence));
+    }
+
+    //is last occurence of day of the week in month
+    public function dayLastOccurence() {
+        $occurence = date("j")+7;
+        if ($occurence > date("t")) {
+            $binary = 1;
+        } else {
+            $binary = 10
+        }
+        log::add('dayinfo', 'debug', 'Last Occurence ' . $binary);
+        $this->checkAndUpdateCmd('various:lastOccurence', $binary);
     }
 
     // Moon
