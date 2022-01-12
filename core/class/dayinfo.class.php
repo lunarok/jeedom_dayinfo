@@ -300,7 +300,7 @@ class dayinfo extends eqLogic {
         if ($occurence > date("t")) {
             $binary = 1;
         } else {
-            $binary = 10
+            $binary = 10;
         }
         log::add('dayinfo', 'debug', 'Last Occurence ' . $binary);
         $this->checkAndUpdateCmd('various:lastOccurence', $binary);
